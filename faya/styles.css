@@ -1,0 +1,233 @@
+:root {
+    --colorFondo: #0b0d17;
+    --colorTexto: #ffffff;
+    --colorPrimario: #003262;
+    --colorAcento: #E03C31;
+    --colorGris: #1a1a1a;
+    --img-hero: url('https://planetary.s3.amazonaws.com/web/assets/pictures/earth-from-artemis-ii-day-2.jpeg'); 
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    background-color: var(--colorFondo); 
+    color: var(--colorTexto);
+}
+
+.main-header {
+    background-color: var(--colorPrimario);
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.logo-art {
+    text-decoration: none; 
+    color: var(--colorTexto); 
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.nav-btn {
+    background-color: var(--colorAcento);
+    color: var(--colorTexto);
+    text-decoration: none; 
+    padding: 10px;
+    text-align: center; 
+    border-radius: 5px;
+    font-weight: bold; 
+}
+
+.hero-section {
+    height: 60vh;
+    background-image: var(--img-hero); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.main-footer {
+    background-color: var(--colorGris);
+    padding: 30px;
+    text-align: center;
+    border-top: 3px solid var(--colorAcento);
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--colorGris);
+    border: 2px solid var(--colorPrimario); 
+    padding: 20px;
+    text-align: center;
+}
+
+.card-img {
+    width: 100%; 
+    height: auto; 
+    margin: 15px 0; 
+}
+
+.link-btn {
+    display: inline-block; 
+    color: var(--colorAcento);
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.gallery-container {
+    display: flex;             
+    flex-wrap: wrap;           
+    justify-content: center;   
+    gap: 15px;                 
+    padding: 30px;
+}
+
+.gallery-img {
+    width: 100%;               
+    max-width: 350px;          
+    height: 250px;             
+    object-fit: cover;         
+    border: 2px solid var(--colorPrimario); 
+    padding: 5px;              
+    background-color: var(--colorFondo);
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    padding: 40px 20px;
+    align-items: center;
+    background-color: var(--colorFondo);
+}
+
+.text-content {
+    flex: 1; 
+}
+
+.text-content h2 {
+    color: var(--colorAcento);
+    margin-bottom: 15px;
+}
+
+.text-content ul {
+    margin-top: 15px;
+    margin-left: 20px;
+    list-style-type: square; 
+    line-height: 1.8;
+}
+
+.content-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    border: 3px solid var(--colorPrimario);
+}
+
+.table-section {
+    padding: 40px 20px;
+    background-color: var(--colorGris);
+    text-align: center;
+}
+
+.table-section h2 {
+    color: var(--colorAcento);
+    margin-bottom: 20px;
+}
+
+.table-responsive {
+    overflow-x: auto; 
+}
+
+.specs-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse; 
+    color: var(--colorTexto);
+}
+
+.specs-table th, 
+.specs-table td {
+    border: 1px solid var(--colorPrimario);
+    padding: 15px;
+    text-align: left;
+}
+
+.specs-table th {
+    background-color: var(--colorPrimario);
+    text-align: center;
+}
+
+.specs-table tr:nth-child(even) {
+    background-color: #1a2530; 
+}
+
+.specs-table tr:nth-child(odd) {
+    background-color: var(--colorFondo);
+}
+
+@media (min-width: 768px) {
+    .main-header {
+        flex-direction: row; 
+        justify-content: space-between; 
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .cards-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .card {
+        width: 45%;
+    }
+
+    .gallery-img {
+        width: 30%; 
+    }
+
+    .content-section {
+        flex-direction: row; 
+        justify-content: space-between;
+        padding: 60px 40px;
+    }
+
+    .reverse-desktop {
+        flex-direction: row-reverse;
+    }
+}
