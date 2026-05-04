@@ -1,0 +1,228 @@
+:root {
+    --color-verde-oscuro: #1F3330;
+    --color-crema: #F4F1ED;
+    --color-rosa: #F2D1C9;
+    --color-texto-oscuro: #1F3330;
+    --color-texto-claro: #F4F1ED;
+
+    --img-perfil: url('fotito.jpeg');
+    --img-proyecto2: url('juego.avif');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial Narrow', 'Impact', sans-serif;
+    background-color: var(--color-crema);
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+.fondo-oscuro {
+    background-color: var(--color-verde-oscuro);
+    color: var(--color-texto-claro);
+}
+
+.fondo-claro {
+    background-color: var(--color-crema);
+    color: var(--color-texto-oscuro);
+}
+
+.fondo-rosa {
+    background-color: var(--color-rosa);
+    color: var(--color-texto-oscuro);
+}
+
+.encabezado-principal {
+    background-color: var(--color-verde-oscuro);
+    color: var(--color-texto-claro);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.menu-navegacion {
+    display: flex;
+    gap: 20px;
+}
+
+.enlace-nav {
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.seccion-portada {
+    background-color: var(--color-verde-oscuro);
+    color: var(--color-texto-claro);
+    text-align: center;
+    padding: 100px 20px 150px;
+    position: relative;
+}
+
+.nombre-grande {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.foto-perfil {
+    width: 250px;
+    height: 250px;
+    background-image: var(--img-perfil);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid var(--color-crema);
+}
+
+.seccion-dividida {
+    padding: 100px 40px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.titulo-destacado {
+    font-size: 4rem;
+    line-height: 0.9;
+}
+
+.col-derecha h3 {
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.col-derecha p {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.btn-borde {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid var(--color-texto-oscuro);
+    color: var(--color-texto-oscuro);
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.seccion-proyectos {
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.tarjeta-proyecto {
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.img-proyecto {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-p2 { background-image: var(--img-proyecto2); }
+
+.video-proyecto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.info-proyecto {
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.info-proyecto .fecha {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.barra-habilidad {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.barra {
+    width: 100%;
+    height: 10px;
+    background-color: var(--color-crema);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.barra .relleno {
+    height: 100%;
+    background-color: var(--color-verde-oscuro);
+    border-radius: 5px;
+}
+
+.pie-pagina {
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+@media (min-width: 768px) {
+    .seccion-dividida, .seccion-proyectos {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .col-izquierda {
+        width: 40%;
+    }
+
+    .col-derecha {
+        width: 55%;
+    }
+
+    .nombre-grande {
+        font-size: 8rem;
+    }
+}
+
+.aparecer {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.aparecer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

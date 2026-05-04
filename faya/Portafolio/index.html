@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matías Faya - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+
+    <header class="encabezado-principal">
+        <div class="logo">PORTFOLIO</div>
+        <nav class="menu-navegacion">
+            <a href="#sobre-mi" class="enlace-nav">SOBRE MÍ</a>
+            <a href="#habilidades" class="enlace-nav">HABILIDADES</a>
+            <a href="#proyectos" class="enlace-nav">PROYECTOS</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="seccion-portada">
+            <h1 class="nombre-grande"><span>MATÍAS</span> <span>FAYA</span></h1>
+            <div class="foto-perfil"></div>
+        </section>
+
+        <section id="sobre-mi" class="seccion-dividida fondo-claro aparecer">
+            <div class="col-izquierda">
+                <h2 class="titulo-destacado">¡HOLA!<br>SOY<br>MATÍAS</h2>
+            </div>
+            <div class="col-derecha">
+                <h3>SOBRE MÍ</h3>
+                <p>Soy estudiante del Instituto Politécnico Modelo enfocado en el desarrollo de software y análisis de sistemas. Me apasiona resolver problemas y crear soluciones eficientes, desde sistemas de gestión backend hasta el diseño de mecánicas interactivas.</p>
+                <p>Mi enfoque combina una fuerte lógica de programación con administración de servidores Linux, buscando siempre aprender nuevas tecnologías y aplicar buenas prácticas de código.</p>
+                <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" class="btn-borde">Ver LinkedIn</a>
+            </div>
+        </section>
+
+        <section id="educacion" class="seccion-dividida fondo-oscuro aparecer">
+            <div class="col-izquierda">
+                <h2 class="titulo-destacado">MI<br>FORMACIÓN</h2>
+            </div>
+            <div class="col-derecha">
+                <div class="item-linea-tiempo">
+                    <h3>2021 - 2026</h3>
+                    <p><strong>Instituto Politécnico Modelo</strong><br>Formación integral en Desarrollo de Software, Organización de Computadoras y Análisis de Sistemas. Experiencia práctica en configuración de servidores y trabajo en equipo con repositorios Git.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="seccion-proyectos fondo-claro aparecer">
+            <div class="col-izquierda">
+                <h2 class="titulo-destacado">PROYECTOS<br>RECIENTES</h2>
+            </div>
+            <div class="col-derecha">
+                <article class="tarjeta-proyecto">
+                    <div class="img-proyecto">
+                        <video class="video-proyecto" src="casainteligente.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                    <div class="info-proyecto fondo-rosa">
+                        <h3>Casa Inteligente</h3>
+                        <p class="fecha">PYTHON | IOT | AUTOMATIZACIÓN</p>
+                        <p>Sistema de automatización del hogar que permite controlar iluminación, temperatura y seguridad en tiempo real mediante una interfaz intuitiva conectada a dispositivos IoT.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-proyecto">
+                    <div class="img-proyecto img-p2"></div>
+                    <div class="info-proyecto fondo-rosa">
+                        <h3>JUEGOS EN GODOT ENGINE</h3>
+                        <p class="fecha">GDScript | 2D PHYSICS</p>
+                        <p>Creación de mecánicas de juego interactivas, incluyendo conexiones de señales y lógica de físicas para proyectos tipo Pong y Escape Room.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="habilidades" class="seccion-dividida fondo-rosa aparecer">
+            <div class="col-izquierda">
+                <h2 class="titulo-destacado">SKILLS &<br>TECNOLOGÍAS</h2>
+            </div>
+            <div class="col-derecha">
+                <div class="barra-habilidad">
+                    <span>Java / Spring Boot / Hibernate</span>
+                    <div class="barra"><div class="relleno" style="width: 85%;"></div></div>
+                </div>
+                <div class="barra-habilidad">
+                    <span>JavaScript / React</span>
+                    <div class="barra"><div class="relleno" style="width: 75%;"></div></div>
+                </div>
+                <div class="barra-habilidad">
+                    <span>Linux / Docker / Apache</span>
+                    <div class="barra"><div class="relleno" style="width: 80%;"></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina fondo-oscuro">
+        <p>Desarrollado por: Matías Faya &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
